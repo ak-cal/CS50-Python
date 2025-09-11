@@ -22,7 +22,10 @@ def main():
             mass = int(input("Enter Mass: "))
             einstein(mass)
         case "5":
-            print("hello")
+            dollars = dollars_to_float(input("How much was the meal? "))
+            percent = percent_to_float(input("What percentage would you like to tip? "))
+            tip = dollars * percent
+            print(f"Leave ${tip:.2f}")
 
 
 def indoor():
@@ -47,6 +50,12 @@ def einstein(m):
     E = m*c**2
     print(E)
 
-def calculator():
-    print("hello")
+def dollars_to_float(d):
+    # TODO
+    return float(d.replace("$", " ".strip()))
+    
+def percent_to_float(p):
+    # TODO
+    return float(p.replace("%", " ").strip()) / 100
+
 main()
